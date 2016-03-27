@@ -1,0 +1,118 @@
+//
+//  PrefixHeader.pch
+//  NewsTableView
+//
+//  Created by 虞海飞 on 16/3/22.
+//  Copyright © 2016年 虞海飞. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//常用框架
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Masonry.h"//自动布局
+#import "IanAlert.h"//警告框
+#import "AFNetworking.h" //网络请求
+#import "UIImageView+WebCache.h"//网络图片缓存
+#import <AVFoundation/AVFoundation.h> //二维码
+
+//常量
+#pragma  mark -- 获取视图高度
+/**
+ *	获取视图高度
+ *
+ *	@param 	view 	视图对象
+ *
+ *	@return	高度
+ */
+#define DEF_HEIGHT(view) view.bounds.size.height
+
+#pragma  mark -- 主屏的宽
+/**
+ *  主屏的宽
+ */
+#define DEF_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+
+#pragma  mark -- 主屏的高
+/**
+ *  主屏的高
+ */
+#define DEF_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
+#pragma  mark -- 主屏的size
+/**
+ *  主屏的size
+ */
+#define DEF_SCREEN_SIZE   [[UIScreen mainScreen] bounds].size
+
+#pragma  mark -- 主屏的frame
+/**
+ *  主屏的frame
+ */
+#define DEF_SCREEN_FRAME  [UIScreen mainScreen].bounds
+
+#pragma  mark -- 生成RGB颜色
+/**
+ *	生成RGB颜色
+ *
+ *	@param 	red 	red值（0~255）
+ *	@param 	green 	green值（0~255）
+ *	@param 	blue 	blue值（0~255）
+ *
+ *	@return	UIColor对象
+ */
+#define DEF_RGB_COLOR(_red, _green, _blue) [UIColor colorWithRed:(_red)/255.0f green:(_green)/255.0f blue:(_blue)/255.0f alpha:1]
+
+#pragma  mark -- 生成RGBA颜色
+/**
+ *	生成RGBA颜色
+ *
+ *	@param 	red 	red值（0~255）
+ *	@param 	green 	green值（0~255）
+ *	@param 	blue 	blue值（0~255）
+ *	@param 	alpha 	blue值（0~1）
+ *
+ *	@return	UIColor对象
+ */
+#define DEF_RGBA_COLOR(_red, _green, _blue, _alpha) [UIColor colorWithRed:(_red)/255.0f green:(_green)/255.0f blue:(_blue)/255.0f alpha:(_alpha)]
+
+#pragma  mark -- 打印string
+/**
+ 打印string
+ */
+#define nslog_String(a) NSLog(@"%@",a)
+
+#pragma  mark --  打印int
+/**
+ 打印int
+ */
+#define nslog_int(a) NSLog(@"%d",a)
+
+#pragma  mark --  打印frame
+/**
+ 打印frame
+ */
+#define nslog_frame(view) NSLog(@"%@",NSStringFromCGRect(view.frame))
+
+#pragma  mark -- 打印float
+/**
+ 打印float
+ */
+#define nslog_float(a) NSLog(@"%f",a)
+
+
+#define ALL_PATH  @"http://mc2.cz001.com.cn"
+
+/**
+ 轮播图
+ */
+#define SHUFFLING_PATH  @"cms/topimages.php?typeid=72"
+
+/**
+ * 新闻列表
+ */
+#define NEWSTABLE_PATH @"cms/index.php?typeid=72"
+
+#endif
