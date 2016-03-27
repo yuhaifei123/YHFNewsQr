@@ -92,16 +92,9 @@
         [self.aVCaptureSession addOutput: self.aVCaptureMetadataOutput];
     }
 
-    // 3.将输入和输出都添加到会话中
-    //  [self.aVCaptureSession addInput: self.aVCaptureDeviceInput];
-    NSLog(@"%@",self.aVCaptureMetadataOutput.availableMetadataObjectTypes);
-    //[self.aVCaptureSession addOutput: self.aVCaptureMetadataOutput];
-    NSLog(@"%@",self.aVCaptureMetadataOutput.availableMetadataObjectTypes);
-
     // 4.设置输出能够解析的数据类型
     // 注意: 设置能够解析的数据类型, 一定要在输出对象添加到会员之后设置, 否则会报错
     self.aVCaptureMetadataOutput.metadataObjectTypes = self.aVCaptureMetadataOutput.availableMetadataObjectTypes;
-    NSLog(@"%@",self.aVCaptureMetadataOutput.availableMetadataObjectTypes);
 
     // 5.设置输出对象的代理, 只要解析成功就会通知代理
     [self.aVCaptureMetadataOutput setMetadataObjectsDelegate:controller queue:dispatch_get_main_queue() ];
